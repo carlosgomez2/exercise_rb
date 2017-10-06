@@ -1,7 +1,7 @@
 # First Method
 # text = ''
 # line_count = 0
-# File.open("oliver.txt").each do |line| 
+# File.open("oliver.txt").each do |line|
 # 	line_count += 1
 # 	text << line
 # end
@@ -12,7 +12,7 @@ lines = File.readlines(ARGV[0]) # ARGV[0] or ARGV.first, allows to take any file
 line_count = lines.size
 text = lines.join
 
-puts "#{line_count} lines" 
+puts "#{line_count} lines"
 
 # Total Characters
 total_characters = text.length

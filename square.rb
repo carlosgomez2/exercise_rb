@@ -22,5 +22,3 @@ c = Square.new
 puts Square.count #=> 3
 d = Square.new
 puts Square.count #=> 4
-
-

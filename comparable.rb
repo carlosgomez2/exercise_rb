@@ -1,7 +1,7 @@
 class Song
 	include Comparable
 	attr_accessor :length
-	
+
 	def <=>(other)
 		@length <=> other.length
 	end
@@ -21,4 +21,3 @@ puts "Is A minor to B: #{a < b}"
 puts "Is B higher or equal to C: #{b >= c}"
 puts "Is C higher than A: #{c > a}"
 puts "Is A between B and C: #{a.between?(b,c)}"
-

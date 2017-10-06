@@ -37,5 +37,3 @@ end
 
 a = Person.new("Carlos")
 a::Doctor.new
-
-

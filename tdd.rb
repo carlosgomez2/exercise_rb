@@ -17,15 +17,15 @@ end
 require 'test/unit'
 
 class TestTitleize < Test::Unit::TestCase
-  def test_basic
+	def test_basic
 		# Let's make it fail first
 		# assert_equal("Let's make it fail first", "foo".titleize)
 
 		# Let's make it pass
-    assert_equal("This Is A Test", "this is a test".titleize)
-    assert_equal("Another Test 1234", "another test 1234".titleize)
-    assert_equal("We're Testing Titleize", "We're testing titleize".titleize)
-  end
+		assert_equal("This Is A Test", "this is a test".titleize)
+		assert_equal("Another Test 1234", "another test 1234".titleize)
+		assert_equal("We're Testing Titleize", "We're testing titleize".titleize)
+	end
 end
 
 # String to test

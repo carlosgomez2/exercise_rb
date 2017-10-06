@@ -10,33 +10,33 @@ class Dungeon
 	# Room = Struct.new(:reference, :name, :description, :connections)
 
 	def start(location)
-	 	@player.location = location
-	 	show_current_description
-	 end
+		@player.location = location
+		show_current_description
+	end
 
- def add_room(reference, name, description, connections)
- 	@rooms << Room.new(reference, name, description, connections)
- end
+	def add_room(reference, name, description, connections)
+		@rooms << Room.new(reference, name, description, connections)
+	end
 
- def show_current_description
- 	puts find_room_in_dungeon(@player.location).full_description
- end
+	def show_current_description
+		puts find_room_in_dungeon(@player.location).full_description
+	end
 
- def find_room_in_dungeon(reference)
- 	@rooms.detect { |room| room.reference == reference }
- end
+	def find_room_in_dungeon(reference)
+		@rooms.detect { |room| room.reference == reference }
+	end
 
- def find_room_in_direction(direction)
- 	find_room_in_dungeon(@player.location).connections[directions]
- end
+	def find_room_in_direction(direction)
+		find_room_in_dungeon(@player.location).connections[directions]
+	end
 
- def go(direction)
- 	puts "you go " + direction.to_s
- 	@player.location = find_room_in_direction(direction)
- 	show_current_description
- end
+	def go(direction)
+		puts "you go " + direction.to_s
+		@player.location = find_room_in_direction(direction)
+		show_current_description
+	end
 
-  class Player
+	class Player
 		attr_accessor :name, :location
 
 		def initialize(name)
@@ -44,20 +44,20 @@ class Dungeon
 		end
 	end
 
-  class Room
-  	attr_accessor :reference, :name, :description, :connections
+	class Room
+		attr_accessor :reference, :name, :description, :connections
 
-  	def initialize(reference, name, description, connections)
-  		@reference = reference
-  		@name = name
-  		@description = description
-  		@connections = connections
-  	end
+		def initialize(reference, name, description, connections)
+			@reference = reference
+			@name = name
+			@description = description
+			@connections = connections
+		end
 
-	  def full_description
-	 		@name + "\n\nYou are in " + @description
-	 	end
-  end
+		def full_description
+			@name + "\n\nYou are in " + @description
+		end
+	end
 end
 
 # Create main object
