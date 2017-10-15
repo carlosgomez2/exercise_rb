@@ -1,6 +1,6 @@
 # OS detection
 if RUBY_PLATFORM =~ /win32/
-  puts "We'rein Windows"
+  puts "We're in Windows"
 elsif RUBY_PLATFORM =~ /linux/
   puts "We're in Linux"
 elsif RUBY_PLATFORM =~ /darwin/
